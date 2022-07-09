@@ -1,6 +1,6 @@
 :root {
-  --font-color: rgb(212, 212, 212);
-  --main-color: purple;
+  --font-color: rgb(182, 181, 181);
+  --main-color: #e6007e;
 }
 html,
 body {
@@ -8,6 +8,7 @@ body {
   height: 100%;
   overflow: hidden;
   margin: 0;
+  padding: 0;
   display: flex;
 }
 
@@ -37,14 +38,15 @@ body {
   flex-wrap: wrap;
   height: 100%;
 }
+.container > div {
+  width: 100%;
+  padding-left: 50px;
+  padding-top: 20px;
+}
 .mid {
   background-color: rgb(6, 6, 6);
 }
-.upper,
-.mid,
-.bottom {
-  width: 100%;
-}
+
 .upper,
 .bottom {
   font-family: "Roboto", sans-serif;
@@ -55,11 +57,24 @@ body {
 
 button {
   background-color: black;
-  color: white;
-  border: var(--main-color);
+  color: var(--main-color);
+  border: 4px solid var(--main-color);
   border-radius: 5px;
   padding: 10px;
   font-size: 1.2rem;
+  font-weight: bold;
   font-family: "Roboto", sans-serif;
+  transition: ease-in-out 0.1s;
+}
+
+button:hover {
   cursor: pointer;
+  background-color: var(--main-color);
+  color: black;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
